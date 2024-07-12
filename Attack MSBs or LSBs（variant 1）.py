@@ -145,7 +145,7 @@ def build_basis(gamma, u, T, L, m, tau, delta, sigma, k_mu, guesum, fac):
     return A
 
 
-#index: There are 100 groups of data.7z, pick one (e.g., 29)
+#index: There are 100 groups in data.7z, picking one (e.g., 29)
 index=29
 #q: Modulus of elliptic curve(Curve secp256k1)
 q = 115792089237316195423570985008687907852837564279074904382605163141518161494337
