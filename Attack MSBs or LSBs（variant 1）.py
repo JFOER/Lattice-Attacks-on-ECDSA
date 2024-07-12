@@ -169,7 +169,6 @@ k_know = []
 k_bar = []
 k_lam = []
 k_mu = []
-# 未知位数的最大值
 k_m = []
 
 
@@ -211,6 +210,7 @@ with open(filename_hash, 'r') as file:
         hash.append(hash_decimal)
 
 nofk = 4
+#model: Either "MSBs" or "LSBs"
 model = "MSBs"
 for i in range(0, 1000):
     tmp1 = get_known_bits(nofk,model)
@@ -224,7 +224,6 @@ for i in range(0, 1000):
 u = 65
 # num: the number of the experiments
 num = 200
-# 随机数
 random_pairs = get_randomsig(u, num)
 # suc: The number of successful times
 suc = 0
@@ -339,6 +338,7 @@ for cnt in range(0, num):
         fac.append(1)
     lattice = build_basis(gamma, u, T, L, m, tau, delta, sigma, mr_mu, guesum, fac)
     begin_time = time.time()
+    #BKZ reduction
     param = BKZ.Param(block_size = 45, strategies = BKZ.DEFAULT_STRATEGY )
     l_bkz = BKZ.reduction(lattice, param)
     end_time = time.time() - begin_time
