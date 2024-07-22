@@ -258,6 +258,7 @@ for i in range(0,1000):
     k_m.append(tmp5)
 
 # u: the number of signatures
+# if u = 3, it is recommended to set the "limit" to 20, while 5 for the u = 2
 u = 3
 # num: the number of the experiments
 num = 200
@@ -289,7 +290,7 @@ for cnt in range(0, num):
         t_s.append(s[item])
     mr_lam = []
     mr_mu = []
-    #limit: Set the limitation for loss data
+    #limit: Set the limitation for loss data(20 for u = 3, 5 for u = 2)
     limit = 20
 
     m = 1
